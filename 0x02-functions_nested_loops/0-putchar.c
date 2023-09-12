@@ -1,20 +1,16 @@
 #include <stdio.h>
 int _putchar(char c);
-/*
+/**
+ * main - Entry point
  *
- *
- * main : The entry point
- *
- * Return value is (0) when success
- *
- *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
 	char string[] = "_putchar";
-	int counter=0;
+	int counter = 0;
 
-	while(counter < 8)
+	while (counter < 8)
 	{
 		_putchar(string[counter]);
 		counter++;

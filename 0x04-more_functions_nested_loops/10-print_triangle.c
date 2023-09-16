@@ -1,28 +1,33 @@
 #include "main.h"
 /**
- * print_triangle - draws a diagonal line in the terminal.
- * @size: the number of times '\' should be printed
+ * print_triangle - prints a triangle.
+ * @size: the size of the triangle.
  *
  * Return: void
  *
  */
 void print_triangle(int size)
 {
-	int counter = 0;
-	int i;
+	int row, col;
 
 	if (size > 0)
-		while (size)
+	{
+		for (row = 1; row <= size; row++)
 		{
-			_putchar('#');
-			if (size > 1)
+			col = 1;
+			while (col <= (size - row))
 			{
-				_putchar('\n');
-				counter++;
-				for (i = 0; i < counter; i++)
-					_putchar(' ');
+				_putchar(' ');
+				col++;
 			}
-			size--;
+			while (col <= size)
+			{
+				_putchar('#');
+				col++;
+			}
+			if (row != size)
+				_putchar('\n');
 		}
+	}
 	_putchar('\n');
 }

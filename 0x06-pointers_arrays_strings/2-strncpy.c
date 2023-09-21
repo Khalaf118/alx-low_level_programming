@@ -17,7 +17,9 @@ char *_strncpy(char *dest, char *src, int n)
 		l1++;
 	while (src[l2])
 		l2++;
-	if ((l1 >= l2 && l2 >= n) || (l1 <= l2 && l2 > n && l1 < n) || (l1 <= l2 && l2 > n && l1 <= n))
+	if ((l1 >= l2 && l2 >= n) ||
+		(l1 <= l2 && l2 > n && l1 < n) ||
+		(l1 <= l2 && l2 > n && l1 <= n))
 	{
 		for (i = 0; i < n; i++)
 			dest[i] = src[i];
